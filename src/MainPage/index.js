@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import TodoDate from "..//TodoDate";
+import TodoLeft from "..//TodoLeft";
+import TodoAdd from "..//TodoAdd";
 
 
 const Container = styled.div`
@@ -18,6 +20,7 @@ const Box = styled.div`
     width: 30%;
     margin-top: 20px;
     border-radius: 30px;
+    font-family: cursive;
 `
 
 
@@ -27,6 +30,8 @@ return (
     <Container> 
         <Box> 
             <TodoDate /> 
+            <TodoLeft />
+            <TodoAdd />
         </Box>
     </Container>
 
