@@ -4,6 +4,7 @@ import styled from "styled-components";
 import TodoDate from "..//TodoDate";
 import TodoLeft from "..//TodoLeft";
 import TodoAdd from "..//TodoAdd";
+import TodoItem from "..//TodoItem";
 
 
 const Container = styled.div`
@@ -32,6 +33,7 @@ return (
             <TodoDate /> 
             <TodoLeft />
             <TodoAdd />
+            <TodoItem />
         </Box>
     </Container>
 

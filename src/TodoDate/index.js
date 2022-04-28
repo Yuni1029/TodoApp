@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const Date = styled.div`
+const Dates = styled.div`
     margin-left: 20px;
     margin-top: 20px;
     font-size: 25px;
@@ -9,12 +9,17 @@ const Date = styled.div`
 `;
 
 function TodoDate () {
+    const today = new Date();
+    console.log(today.getFullYear());
+    console.log(today.getMonth());
+    console.log(today.getDate());
+    
 
     return (
-        <Date>
-            <div> 2022 / 04 / 26 </div> 
+        <Dates>
+            <div> {today.getFullYear()} / {today.getMonth()+1} / {today.getDate()} </div>
             <div> 화요일 </div>
-        </Date>
+        </Dates>
     )
 }
 
