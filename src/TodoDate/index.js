@@ -13,12 +13,12 @@ function TodoDate () {
     console.log(today.getFullYear());
     console.log(today.getMonth());
     console.log(today.getDate());
-    
+    const day = today.toLocaleString("en-US", { weekday: "long"});
 
     return (
         <Dates>
             <div> {today.getFullYear()} / {today.getMonth()+1} / {today.getDate()} </div>
-            <div> 화요일 </div>
+            <div> {day} </div>
         </Dates>
     )
 }
