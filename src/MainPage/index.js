@@ -26,7 +26,7 @@ const Box = styled.div`
 
 
 function MainPage () {
-    const [list, setList] = useState({ });
+    const [todos, setTodos] = useState([]);
 
     const [age, setAge] = useState(0);
 
