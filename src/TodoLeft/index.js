@@ -17,11 +17,12 @@ const ColoredLine = ({ color }) => (
     />
 );
 
-function TodoLeft () {
+function TodoLeft ({todos}) {
+//todos => []
 
     return (
         <Todos> 
-        <div> 4 todos left </div>
+        <div> {todos.length} todos left </div>
         <ColoredLine color="blue" />
         </Todos> 
     )

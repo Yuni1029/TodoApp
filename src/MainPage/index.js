@@ -26,17 +26,24 @@ const Box = styled.div`
 
 
 function MainPage () {
-    const [todos, setTodos] = useState([]);
 
-    const [age, setAge] = useState(0);
+    const [todos, setTodos] = useState([
+        {IsDone: false, text: "hello", id: 1 }
+    ]);
+    const whatToDo = (todo) => {
+        setTodos([...todos,todo])
+    };
+    console.log(todos);
+
+    // const [age, setAge] = useState(6);
 
 return (
     <Container> 
         <Box> 
             <TodoDate /> 
-            <TodoLeft />
-            <TodoAdd />
-            <TodoItem />
+            <TodoLeft todos={todos} />
+            <TodoAdd todos={todos} updateTodo={whatToDo} />
+            <TodoItem todos={todos} updateTodo={setTodos} />
         </Box>
     </Container>
 
