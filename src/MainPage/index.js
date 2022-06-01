@@ -12,7 +12,7 @@ const Container = styled.div`
     height: 100vh;
     display: flex;
     justify-content: center;
-`;
+`; 
 
 const Box = styled.div`
     background-color: white;
@@ -23,7 +23,6 @@ const Box = styled.div`
     border-radius: 30px;
     font-family: cursive;
 `
-
 
 function MainPage () {
 
@@ -37,13 +36,17 @@ function MainPage () {
 
     // const [age, setAge] = useState(6);
 
+const deleteTodo = () => {
+    setTodos([])
+}
+
 return (
     <Container> 
         <Box> 
             <TodoDate /> 
             <TodoLeft todos={todos} />
             <TodoAdd todos={todos} updateTodo={whatToDo} />
-            <TodoItem todos={todos} updateTodo={setTodos} />
+            <TodoItem todos={todos} removeTodo={deleteTodo} />
         </Box>
     </Container>
 

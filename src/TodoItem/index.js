@@ -20,22 +20,22 @@ const Bin = styled.img`
 `
 
 
-function TodoItem ({todos, updateList}) {
+function TodoItem ({todos, removeTodo}) {
 
     const newText = document.getElementById("Textbox");
 
     const newTodoset = () => {
-        alert("ddd")
+        removeTodo()
+        console.log(todos);
     };
 
-    console.log(todos);
 
 
     return (
         <Container>
             <Check>
                 <input type="checkbox" />
-                <PutText id="Textbox"> 
+                <PutText id="Textbox"> {todos[0].text} 
                     <Bin
                         onClick={newTodoset} 
                         src="https://cdn4.iconfinder.com/data/icons/linecon/512/delete-512.png">
