@@ -5,6 +5,7 @@ import TodoDate from "..//TodoDate";
 import TodoLeft from "..//TodoLeft";
 import TodoAdd from "..//TodoAdd";
 import TodoItem from "..//TodoItem";
+import TodoList from "..//TodoList";
 
 
 const Container = styled.div`
@@ -46,7 +47,8 @@ return (
             <TodoDate /> 
             <TodoLeft todos={todos} />
             <TodoAdd todos={todos} updateTodo={whatToDo} />
-            <TodoItem todos={todos} removeTodo={deleteTodo} />
+            {/* <TodoItem todos={todos} removeTodo={deleteTodo} /> */}
+            <TodoList todos={todos} removeTodo={deleteTodo} /> 
         </Box>
     </Container>
 

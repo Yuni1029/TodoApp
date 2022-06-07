@@ -3,6 +3,10 @@ import styled from "styled-components";
 
 const Container= styled.div`
 `
+
+const Click = styled.button`
+`
+
 const Check=styled.div`
 display: block;
 position: relative;
@@ -20,13 +24,12 @@ const Bin = styled.img`
 `
 
 
-function TodoItem ({todos, removeTodo}) {
+function TodoItem ({todo, removeTodo}) {
 
-    const newText = document.getElementById("Textbox");
-
+   
     const newTodoset = () => {
         removeTodo()
-        console.log(todos);
+        console.log(todo);
     };
 
 
@@ -34,13 +37,12 @@ function TodoItem ({todos, removeTodo}) {
     return (
         <Container>
             <Check>
-                <input type="checkbox" />
-                <PutText id="Textbox"> {todos[0].text} 
-                    <Bin
-                        onClick={newTodoset} 
-                        src="https://cdn4.iconfinder.com/data/icons/linecon/512/delete-512.png">
-                    </Bin>
-                </PutText>
+                <Click isDone={todo.isDone} />
+                <PutText> {todo.text} </PutText>
+                <Bin
+                    onClick={newTodoset} 
+                    src="https://cdn4.iconfinder.com/data/icons/linecon/512/delete-512.png">
+                </Bin>
                 
             </Check>
         </Container>
