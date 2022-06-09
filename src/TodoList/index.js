@@ -13,7 +13,7 @@ function TodoList ({todos, removeTodo}) {
     return (
         <>
         <Container> 
-            {todos.map( (todo) => (
+            {todos.map((todo) => (
                 <TodoItem todo={todo} removeTodo={removeTodo}></TodoItem>
             )
             )}

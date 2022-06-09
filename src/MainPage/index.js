@@ -25,11 +25,15 @@ const Box = styled.div`
     font-family: cursive;
 `
 
+//.map -> iterate the array
+//.filter -> 
+
 function MainPage () {
 
     const [todos, setTodos] = useState([
-        {IsDone: false, text: "hello", id: 1 }
+
     ]);
+
     const whatToDo = (todo) => {
         setTodos([...todos,todo])
     };
@@ -37,8 +41,11 @@ function MainPage () {
 
     // const [age, setAge] = useState(6);
 
-const deleteTodo = () => {
-    setTodos([])
+const deleteTodo = (id) => {
+    console.log(id)
+    const newTodos = todos.filter((todo) => todo.id !=id);
+    setTodos(newTodos);
+    // setTodos([])
 }
 
 return (

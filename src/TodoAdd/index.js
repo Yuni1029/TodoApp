@@ -12,7 +12,7 @@ function TodoAdd ({todos, updateTodo}) { //updateTodo should be declared in main
     const [todo, setTodo] = useState ({
         id: null,
         text: "",
-        isDone: false,
+        isDone: true,
     });
 
     const whatToDo = (e) => {
@@ -22,7 +22,7 @@ function TodoAdd ({todos, updateTodo}) { //updateTodo should be declared in main
             // [name]:value,
             id:todos.length +1,
             text: value,
-            isDone: false, 
+            isDone: true, 
             //avoid reputation of repeating function using the same code
         });
     };
