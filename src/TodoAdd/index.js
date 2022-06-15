@@ -22,13 +22,14 @@ function TodoAdd ({todos, updateTodo}) { //updateTodo should be declared in main
             // [name]:value,
             id:todos.length +1,
             text: value,
-            isDone: true, 
+            isDone: false, 
             //avoid reputation of repeating function using the same code
         });
+        
     };
 
     const onClickChange = () => {
-        updateTodo(todo); //used as a function
+        updateTodo(todo) //used as a function
 }
 
 console.log(todo)

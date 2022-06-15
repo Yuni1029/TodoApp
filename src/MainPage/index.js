@@ -6,6 +6,7 @@ import TodoLeft from "..//TodoLeft";
 import TodoAdd from "..//TodoAdd";
 import TodoItem from "..//TodoItem";
 import TodoList from "..//TodoList";
+import { getValue } from "@testing-library/user-event/dist/utils";
 
 
 const Container = styled.div`
@@ -41,12 +42,25 @@ function MainPage () {
 
     // const [age, setAge] = useState(6);
 
-const deleteTodo = (id) => {
-    console.log(id)
-    const newTodos = todos.filter((todo) => todo.id !=id);
-    setTodos(newTodos);
-    // setTodos([])
-}
+    const deleteTodo = (id) => {
+        console.log(id)
+        
+        const newTodos = todos.filter((todo) => todo.id !=id);
+            setTodos(newTodos);
+                // setTodos([])
+    };
+
+    const changeIsDone = (id) => {
+        const currentTodo = todos[id-1];
+        if (todos === true) {
+            return 
+        } else {
+            return
+        }
+    };
+    setTodos([...todos]);
+
+
 
 return (
     <Container> 

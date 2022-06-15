@@ -14,7 +14,7 @@ height: 20px;
 ${(props) =>
     props.isDone &&
     css`
-        background-color: black;
+        background-color: ;
     `}
 `;
 
@@ -49,13 +49,12 @@ function TodoItem ({todo, removeTodo}) {
     return (
         <Container>
             <Check>
-                <Click isDone={todo.isDone} /> 
+                <Click isDone={todo.isDone} />
                 <PutText> {todo.text} </PutText>
                 <Bin
                     onClick={newTodoset} 
                     src="https://cdn4.iconfinder.com/data/icons/linecon/512/delete-512.png" >
                 </Bin>
-                
             </Check>
         </Container>
     )

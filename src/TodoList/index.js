@@ -7,17 +7,17 @@ const Container = styled.div`
     flex-direction: column; 
 `;
 
-function TodoList ({todos, removeTodo}) {
+function TodoList ({todos, removeTodo, currentTodo}) {
 
 
     return (
         <>
         <Container> 
             {todos.map((todo) => (
-                <TodoItem todo={todo} removeTodo={removeTodo}></TodoItem>
+                <TodoItem todo={todo} removeTodo={removeTodo} currentTodo={currentTodo}></TodoItem>
             )
             )}
-
+        
         
         </Container>
         </>
